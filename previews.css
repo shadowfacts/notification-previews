@@ -1,0 +1,20 @@
+.notifications-preview-popover {
+	position: absolute;
+	right: 5px;
+	top: 59px;
+	min-width: 400px;
+	z-index: 999;
+	background-color: white;
+	padding: 15px;
+	border: 1px solid rgb(209, 213, 218);
+	border-radius: 3px;
+}
+
+.notifications-preview-popover .js-notifications-browser:nth-last-of-type(2),
+.notifications-preview-popover .paginate-container:last-of-type {
+	margin: 0px;
+}
+
+.notifications-preview-popover .notification-actions li:nth-last-child(-n+2) {
+	display: none;
+}

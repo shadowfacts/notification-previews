@@ -1,0 +1,23 @@
+{
+	"name": "notification-previews",
+	"manifest_version": 2,
+	"version": "0.1.0",
+	"description": "Inline GitHub notification previews",
+	"content_scripts": [
+		{
+			"all_frames": true,
+			"run_at": "document_start",
+			"matches": ["https://github.com/*"],
+			"exclude_matches": ["https://github.com/notifications"],
+			"js": ["vendor/jquery-3.2.1.min.js", "allpages.js"],
+			"css": ["previews.css"]
+		},
+		{
+			"all_frames": true,
+			"run_at": "document_start",
+			"matches": ["https://github.com/notifications"],
+			"js": ["vendor/jquery-3.2.1.min.js", "notifications.js"],
+			"css": ["previews.css"]
+		}
+	]
+}
